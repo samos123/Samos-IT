@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block bodyclass %}home{% endblock %}
+{% block body %}
+            {% block pagebody %}
+            <div id="headerbluehome" class="span-24 last">
+                <div id="videohome" class="prepend-1 span-7">
+          <object width="300" height="250"><param name="movie" value="http://www.youtube.com/v/p-WXiqrzAf8?fs=1&amp;hl=nl_NL"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/p-WXiqrzAf8?fs=1&amp;hl=nl_NL" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="300" height="250"></embed></object>
+                </div>
+                <div id="homedescription" class="span-8 append-4 last">
+                    <h3>Introduction</h3>
+                    <hr/>
+                    <p>
+                      This is my personal and business website. It's the same! 
+            I'm Sam Stoelinga, founder of Samos IT. I specialize in web development and online marketing.
+            
+          </p>
+          <<< Check out my introduction here <<<
+                </div>
+            </div>
+      <div class="span-24" id="homecontent">
+        <div id="blogposts" class="span-7 colborder">
+          <img align="center" height="70px" src="img/blog-icon.png"/></br>
+            <ul>
+              <li><a href="#">Welcome to my blog!</a></li>
+              <li><a href="#">Welcome to my blog!</a></li>
+              <li><a href="#">Welcome to my blog!</a></li>
+            </ul><a href="/blog">Visit blog >></a>
+        </div>
+        <div class="span-7 colborder">
+          <img height="70px" src="img/project-icon.jpg"/>
+            
+            <ul>
+              <li><a href="#">Welcome to my blog!</a></li>
+              <li><a href="#">Welcome to my blog!</a></li>
+              <li><a href="#">Welcome to my blog!</a></li>
+            </ul><a href="/blog">Visit Projects Page >></a>
+        </div>
+        <div class="span-7 last">
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+          new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 3,
+            interval: 6000,
+            width: 250,
+            height: 300,
+            theme: {
+              shell: {
+                background: '#333333',
+                color: '#ffffff'
+              },
+              tweets: {
+                background: '#000000',
+                color: '#ffffff',
+                links: '#4aed05'
+              }
+            },
+            features: {
+              scrollbar: false,
+              loop: false,
+              live: false,
+              hashtags: true,
+              timestamp: true,
+              avatars: false,
+              behavior: 'all'
+            }
+          }).render().setUser('samosx').start();
+          </script>
+        </div>
+      </div>
+            {% endblock %}
+{% endblock %}

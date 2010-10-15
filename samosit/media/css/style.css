@@ -1,0 +1,145 @@
+body.home {
+    background-image: url('/media/img/bg.png');
+    background-color: #f5f3f3;
+}
+
+body.page {
+    background-image: url('/media/img/bgpage.png');
+    background-color: #f5f3f3;
+}
+
+h1 {
+	font-family:'Cantarell',arial,serif;
+	font-size:2.4em;
+	margin:0 0 1em;
+	text-shadow:2px 2px 0 #9e9e9e;;
+}
+
+
+#topheader {
+    height: 90px;
+    background-color: #303123;
+}
+
+#topmenu {
+	margin-top: 25px;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* make the LI display inline */
+/* it's position relative so that position absolute */
+/* can be used in submenu */
+#nav li {
+    float: left;
+    display: block;
+    width: 80px;
+    position: relative;
+    z-index: 500;
+    margin: 0 1px;
+}
+
+/* this is the parent menu */
+#nav li a {
+    display: block;
+    padding: 8px 5px 0 5px;
+    font-weight: 700;
+    height: 23px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+#nav li a:hover {
+    color: #fff;
+}
+
+/* you can make a different style for default selected value */
+#nav a.selected {
+    color: #f00;
+}
+
+/* submenu, it's hidden by default */
+#nav ul {
+    position: absolute;
+    left: 0;
+    display: none;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    list-style: none;
+}
+
+#nav ul li {
+    width: 100px;
+    float: left;
+    border-top: 1px solid #fff;
+	background-color: #303123;
+}
+
+/* display block will make the link fill the whole area of LI */
+#nav ul a {
+    display: block;
+    height: 15px;
+    padding: 8px 5px;
+    color: #666;
+}
+
+#nav ul a:hover {
+    text-decoration: underline;
+}
+
+#videohome{
+	margin-top: 25px;
+}
+
+#homedescription {
+    float: right;
+    margin-top: 50px;
+    color: #fff;
+}
+
+#homedescription h3{
+	color: #fff;
+	font-family:"Gill Sans MT";
+	font-size: 20pt;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+}
+
+#homedescription p{
+	font-style: italic;
+}
+
+
+#homecontent{
+	margin-top: 40px;
+	text-align: center;
+
+}
+
+
+#pagecontent{
+	margin-top: 50px;
+	text-algin: left;
+}
+
+
+#sidebar{
+	margin-top:60px;
+}
+
+
+#footer{
+	margin-top: 40px;
+}
+
+
+
+
+
+
+

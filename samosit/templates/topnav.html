@@ -1,0 +1,24 @@
+                    <ul id="nav">
+                        <li>
+                            <a href="{% url samosit.views.index %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Services</a>
+                        </li>
+                        <li>
+                            <a href="{{about_page.get_absolute_url}}">{{about_page.title}}</a>
+                            <ul>
+                              {% for child in about_page.childs.all %}
+                                <li>
+                                    <a href="{{child.get_absolute_url}}">{{child.title}}</a>
+                                </li>
+                               {% endfor %}
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>

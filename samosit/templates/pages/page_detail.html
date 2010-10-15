@@ -1,0 +1,38 @@
+{% extends "page.html" %}
+{% block metatitle %}{{object.metatitle}}{% endblock %}
+{% block content %}
+  <h1>{{object.title}}</h1>
+  {{object.content}}
+  {% if object.parent %}
+  <hr/>
+  Filled Under: <a href="{{object.parent.get_absolute_url}}">{{object.parent.title}}</a>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+                    <div class="box">
+                        <h3>Sub-Pages</h3>
+                        <ul>
+  {# have to find a better way for this sidebar! #}
+  {% if object.parent %}
+  <li><a href="{{object.parent.get_absolute_url}}">{{object.parent.title}}</a></li>
+    {% for child in object.parent.childs.all %}
+      <li><a href="{{child.get_absolute_url}}">{{child.title}}</a></li>
+    {% endfor %}
+  {% endif %}
+  
+  {% if object.childs.all %}
+  <ul>
+    <li><a href="{{object.get_absolute_url}}">{{object.title}}</a></li>
+    {% for child in object.childs.all %}
+      <li><a href="{{child.get_absolute_url}}">{{child.title}}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+                        </ul>
+
+                    </div>
+
+
+
+{% endblock %}

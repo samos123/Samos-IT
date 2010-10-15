@@ -12,13 +12,15 @@
 {% block sidebar %}
                     <div class="box">
                         <h3>Sub-Pages</h3>
-                        <ul>
-  {# have to find a better way for this sidebar! #}
+                        
+  {# Better to make a custom tag for this! #}
   {% if object.parent %}
+  <ul>
   <li><a href="{{object.parent.get_absolute_url}}">{{object.parent.title}}</a></li>
     {% for child in object.parent.childs.all %}
       <li><a href="{{child.get_absolute_url}}">{{child.title}}</a></li>
     {% endfor %}
+  </ul>
   {% endif %}
   
   {% if object.childs.all %}

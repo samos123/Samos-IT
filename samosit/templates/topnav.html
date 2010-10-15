@@ -3,9 +3,6 @@
                             <a href="{% url samosit.views.index %}">Home</a>
                         </li>
                         <li>
-                            <a href="">Services</a>
-                        </li>
-                        <li>
                             <a href="{{about_page.get_absolute_url}}">{{about_page.title}}</a>
                             <ul>
                               {% for child in about_page.childs.all %}

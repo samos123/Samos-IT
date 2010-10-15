@@ -93,7 +93,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'samosit.pages'
+    'samosit.pages',
+    'samosit'
 )
 
 ## Custom PAGE APP BY SAMOS absolute!

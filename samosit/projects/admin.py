@@ -3,9 +3,9 @@ from django.contrib import admin
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    fields = ('title', 'slug', 'image', 'client', 'siteurl', 'content', 'metatitle', 'metadescription', 'metakeywords')
+    fields = ('title', 'slug', 'image', 'client', 'year', 'siteurl', 'content', 'metatitle', 'metadescription', 'metakeywords')
     search_fields = ('title',)
-    prepopulated_fields = {"slug": ("title", "metatitle")}
+    prepopulated_fields = {"slug": ("title",)}
     
     
 admin.site.register(Project, ProjectAdmin)

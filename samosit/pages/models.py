@@ -18,6 +18,9 @@ class Page(models.Model):
     def __unicode__(self):
         return self.title
     
+    @models.permalink
     def get_absolute_url(self):
-        absolute_url = '/'+settings.PAGES_ROOT+str(self.pk)+'/'+self.slug
-        return absolute_url
+        return ('page_detail', (), {
+            'page_id': self.pk,
+            'slug': self.slug})
+        

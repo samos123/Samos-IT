@@ -14,6 +14,13 @@
                         </li>
                         <li>
                             <a href="/projects/">Projects</a>
+                            <ul>
+                              {% for project in projects %}
+                                <li>
+                                    <a href="{{project.get_absolute_url}}">{{project.title}}</a>
+                                </li>
+                               {% endfor %}
+                            </ul>
                         </li>
                         <li>
                             <a href="#">Blog</a>

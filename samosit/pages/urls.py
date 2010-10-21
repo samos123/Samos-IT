@@ -2,5 +2,5 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('samosit.pages.views',
-                       (r'^(?P<page_id>\d+)/([a-zA-Z0-9_.-]{0,40})$', 'detail'),
+                       url(r'^(?P<page_id>\d+)/(?P<slug>[a-zA-Z0-9_.-]{0,40})$', 'detail', name='page_detail'),
 )

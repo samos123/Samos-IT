@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 
     
-def detail(request, page_id):
+def detail(request, page_id, slug):
     p = get_object_or_404(Page, pk=page_id)
     return render_to_response('pages/page_detail.html', {
             'object': p,

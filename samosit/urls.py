@@ -6,16 +6,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^samosit/', include('samosit.foo.urls')),
 
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^$', 'samosit.views.index'),
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-    (r'^p/', include('samosit.pages.urls')),
+    (r'^'+settings.PAGES_ROOT, include('samosit.pages.urls')),
+    (r'^'+settings.PROJECTS_ROOT, include('samosit.projects.urls'))
+    
 )
 
 urlpatterns += patterns('',

@@ -1,0 +1,11 @@
+from samosit.projects.models import Project
+from django.contrib import admin
+
+
+class ProjectAdmin(admin.ModelAdmin):
+    fields = ('title', 'slug', 'image', 'client', 'siteurl', 'content', 'metatitle', 'metadescription', 'metakeywords')
+    search_fields = ('title',)
+    prepopulated_fields = {"slug": ("title", "metatitle")}
+    
+    
+admin.site.register(Project, ProjectAdmin)

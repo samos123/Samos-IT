@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+{% block metatitle %}{{object.metatitle}}{% endblock %}
+{% block content %}
+{% for object in objects %}
+  <h1 align="center">{{object.title}}</h1>
+  <img align="left" src="{{ MEDIA_URL }}{{object.image}}" />
+  <div class="project-description">{{object.content|safe|truncatewords:"20"}}</div>
+  <br/><a href="{{object.get_absolute_url}}">Read More >></a>
+  <hr/>
+  
+  
+{% endfor %}
+{% endblock %}
+
+{% block sidebar %}
+                    <div class="box">
+                        <h3 align="center">Projects</h3>
+                        
+
+
+                    </div>
+
+
+
+{% endblock %}

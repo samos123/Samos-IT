@@ -4,11 +4,6 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 
-
-
-
-
-    
     
 def detail(request, page_id):
     p = get_object_or_404(Page, pk=page_id)

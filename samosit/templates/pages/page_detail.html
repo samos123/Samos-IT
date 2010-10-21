@@ -2,7 +2,7 @@
 {% block metatitle %}{{object.metatitle}}{% endblock %}
 {% block content %}
   <h1>{{object.title}}</h1>
-  {{object.content}}
+  {{object.content|safe}}
   {% if object.parent %}
   <hr/>
   Filled Under: <a href="{{object.parent.get_absolute_url}}">{{object.parent.title}}</a>

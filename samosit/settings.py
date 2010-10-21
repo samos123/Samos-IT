@@ -85,6 +85,15 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.abspath(os.path.dirname(__file__)), 'templates')
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.media',
+)
+
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -94,8 +103,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'samosit.pages',
+    'samosit.projects',
     'samosit'
 )
 
-## Custom PAGE APP BY SAMOS absolute!
-PAGES_ROOT = 'p/'
+## ROOT URLS used in models aboslute url and in urls.py
+PAGES_ROOT = 'pages/'
+PROJECTS_ROOT = 'projects/'

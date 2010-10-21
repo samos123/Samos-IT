@@ -21,3 +21,10 @@ Another way to test that 1 + 1 is equal to 2.
 True
 """}
 
+class PageTest(TestCase):
+    def test_basic_addition(self):
+        """
+        Tests that 1 + 1 always equals 2.
+        """
+        self.failUnlessEqual(1 + 1, 2)
+

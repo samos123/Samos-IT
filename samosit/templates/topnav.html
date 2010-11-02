@@ -1,28 +1,28 @@
-                    <ul id="nav">
-                        <li>
-                            <a href="{% url samosit.views.index %}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{{about_page.get_absolute_url}}">{{about_page.title}}</a>
-                            <ul>
-                              {% for child in about_page.childs.all %}
-                                <li>
-                                    <a href="{{child.get_absolute_url}}">{{child.title}}</a>
-                                </li>
-                               {% endfor %}
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/projects/">Projects</a>
-                            <ul>
-                              {% for project in projects %}
-                                <li>
-                                    <a href="{{project.get_absolute_url}}">{{project.title}}</a>
-                                </li>
-                               {% endfor %}
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                    </ul>
+<ul id="nav">
+  <li>
+    <a href="{% url samosit.views.index %}">Home</a>
+  </li>
+  <li>
+    <a href="{{about_page.get_absolute_url}}">{{about_page.title}}</a>
+    <ul>
+      {% for child in about_page.childs.all %}
+      <li>
+        <a href="{{child.get_absolute_url}}">{{child.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li>
+    <a href="/projects/">Projects</a>
+    <ul>
+      {% for project in projects %}
+      <li>
+        <a href="{{project.get_absolute_url}}">{{project.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li>
+    <a href="#">Blog</a>
+  </li>
+</ul>

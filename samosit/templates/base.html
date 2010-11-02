@@ -1,53 +1,53 @@
 {% load menu_tags %}
 <?xml version="1.0" encoding="iso-8859-1"?>
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <title>{% block metatitle %}Samos IT{% endblock %}</title>
-        <!-- Framework CSS -->
-        <link rel="stylesheet" href="/media/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-        <link rel="stylesheet" href="/media/css/blueprint/print.css" type="text/css" media="print" />
-        <!--[if lt IE 8]><link rel="stylesheet" href="../../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-        <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
-        </script>
-    </head>
-    <body class="{% block bodyclass %}{% endblock %}">
-        <div class="container">
-            <div class="span-24 prepend-2 last" id="topheader">
-                <div class="span-4" id="logo">
-                    <a href="/"><img src="/media/img/logo.png"</a>
-                </div>
-                <div class="prepend-3 span-12" id="topmenu">
-                {% show_topnav %}
-                </div>
-            </div>
+  <head>
+    <title>{% block metatitle %}Samos IT{% endblock %}</title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="/media/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/media/css/blueprint/print.css" type="text/css" media="print" />
+    <!--[if lt IE 8]><link rel="stylesheet" href="../../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="all">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+    </script>
+  </head>
+  <body class="{% block bodyclass %}{% endblock %}">
+    <div class="container">
+      <div class="span-24 prepend-2 last" id="topheader">
+        <div class="span-4" id="logo">
+          <a href="/">
+          <img src="/media/img/logo.png"</a>
+        </div>
+        <div class="prepend-3 span-12" id="topmenu">
+          {% show_topnav %}
+        </div>
+      </div>
       {% block body %}
-      
-      {% endblock %}
 
+      {% endblock %}
 
       {% block footer %}
       <div id="footer" class="span-24 last box">
         Copyright SamosIT
       </div>
       {% endblock %}
-        </div>
-            <script type="text/javascript">
-                $(document).ready(function(){
-                
-                    $('#nav li').hover(function(){
-                        //show its submenu
-                        $('ul', this).slideDown(100);
-                        
-                    }, function(){
-                        //hide its submenu
-                        $('ul', this).slideUp(100);
-                    });
-                    
-                });
-            </script>
-            {% block beforebody %}
-            {% endblock %}
-        </body>
-    </html>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+      $('#nav li').hover(function(){
+      //show its submenu
+      $('ul', this).slideDown(100);
+
+      }, function(){
+      //hide its submenu
+      $('ul', this).slideUp(100);
+      });
+
+      });
+    </script>
+    {% block beforebody %}
+    {% endblock %}
+  </body>
+</html>

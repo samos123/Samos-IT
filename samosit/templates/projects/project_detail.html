@@ -1,7 +1,12 @@
 {% extends "page.html" %}
+{% load thumbnail %}
+
 {% block metatitle %}{{object.metatitle}}{% endblock %}
 {% block content %}
   <h1 align="center">{{object.title}}</h1>
+{% thumbnail object.image "100x100" crop="center" as im %}
+    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+{% endthumbnail %}
   <img align="left" src="{{ MEDIA_URL }}{{object.image}}" />
   <div class="project-content">{{object.content|safe}}</div>
   <hr/>

@@ -13,12 +13,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'samosit',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'USER': 'postgres',                      # Not used with sqlite3.
+        'PASSWORD': 'randompass',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -104,9 +107,13 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'samosit.pages',
     'samosit.projects',
-    'samosit'
+    'samosit',
+    'sorl.thumbnail',
 )
 
 ## ROOT URLS used in models aboslute url and in urls.py
 PAGES_ROOT = 'pages/'
 PROJECTS_ROOT = 'projects/'
+
+# Caching for sorl-thumbnail
+CACHE_BACKEND = 'db://cachetable'

@@ -1,6 +1,7 @@
 # Django settings for samosit project.
 import os
 DEBUG = True
+THUMBNAIL_DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -117,3 +118,5 @@ PROJECTS_ROOT = 'projects/'
 
 # Caching for sorl-thumbnail
 CACHE_BACKEND = 'db://cachetable'
+INTERNAL_IPS = ('127.0.0.1',)
+THUMBNAIL_CACHE_TIMEOUT = 3600 * 24 * 365

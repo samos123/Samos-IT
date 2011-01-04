@@ -1,11 +1,9 @@
 body.home {
-    background-image: url('/media/img/bg.png');
-    background-color: #f5f3f3;
+    background: #fff url('/media/img/bg.png') repeat-x;
 }
 
 body.page {
-    background-image: url('/media/img/bgpage.png');
-    background-color: #f5f3f3;
+    background: #fff url('/media/img/bgpage.png') repeat-x;
 }
 
 h1 {
@@ -135,6 +133,16 @@ h1 {
 
 #footer{
 	margin-top: 40px;
+}
+
+
+
+/* project styling 
+ * 
+ */
+.project-info{
+  font-size:12pt;
+  padding: 15px 15px 15px;
 }
 
 

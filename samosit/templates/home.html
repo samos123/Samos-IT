@@ -19,7 +19,7 @@
             </div>
       <div class="span-24" id="homecontent">
         <div id="blogposts" class="span-7 colborder">
-          <img align="center" height="70px" src="/media/img/blog-icon.png"/></br>
+          <h2>Blog:</h2>
             <ul>
               <li><a href="#">Welcome to my blog!</a></li>
               <li><a href="#">Welcome to my blog!</a></li>
@@ -27,13 +27,13 @@
             </ul><a href="/blog">Visit blog >></a>
         </div>
         <div class="span-7 colborder">
-          <img height="70px" src="/media/img/project-icon.jpg"/>
+          <h2>Projects:</h2>
             
             <ul>
-              <li><a href="#">Welcome to my blog!</a></li>
-              <li><a href="#">Welcome to my blog!</a></li>
-              <li><a href="#">Welcome to my blog!</a></li>
-            </ul><a href="/blog">Visit Projects Page >></a>
+              {% for project in projects %}
+              <li><a href="{{project.get_absolute_url}}">{{project.title}}</a></li>
+              {% endfor %}
+            </ul><a href="/projects/">Visit Projects Page >></a>
         </div>
         <div class="span-7 last">
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>

@@ -117,6 +117,5 @@ PAGES_ROOT = 'pages/'
 PROJECTS_ROOT = 'projects/'
 
 # Caching for sorl-thumbnail
-CACHE_BACKEND = 'db://cachetable'
-INTERNAL_IPS = ('127.0.0.1',)
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 THUMBNAIL_CACHE_TIMEOUT = 3600 * 24 * 365

@@ -4,13 +4,11 @@
 {% block metatitle %}{{object.metatitle}}{% endblock %}
 {% block content %}
 {% for object in objects %}
-  <h1 align="center">{{object.title}}</h1>
-{% thumbnail imageurl "100x100" crop="center" as im %}
-    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+  <h1 align="center"><a href="{{object.get_absolute_url}}">{{object.year}}: {{object.title}}</a></h1>
+{% thumbnail object.image "600x200" crop="center" as im %}
+    <center><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></center>
 {% endthumbnail %}
-  <img align="left" src="{{ MEDIA_URL }}{{object.image}}" />
-  <div class="project-description">{{object.content|safe|truncatewords:"20"}}</div>
-  <br/><a href="{{object.get_absolute_url}}">Read More >></a>
+  <div class="project-description">{{object.content|safe|truncatewords:"40"}} <a href="{{object.get_absolute_url}}">Read More >></a></div>
   <hr/>
   
   
@@ -21,7 +19,7 @@
                     <div class="box">
                         <h3 align="center">Projects</h3>
                         
-
+                        
 
                     </div>
 

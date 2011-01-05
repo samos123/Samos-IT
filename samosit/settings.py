@@ -95,6 +95,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.media',
+    'django.core.context_processors.request', # used in django-articles
 )
 
 
@@ -106,10 +107,16 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    # These 3 needed for django-articles
+    'django.contrib.markup',
+    'django.contrib.humanize',
+    'django.contrib.syndication',
     'samosit.pages',
     'samosit.projects',
     'samosit',
     'sorl.thumbnail',
+    'articles',
+    'south'
 )
 
 ## ROOT URLS used in models aboslute url and in urls.py
@@ -119,3 +126,7 @@ PROJECTS_ROOT = 'projects/'
 # Caching for sorl-thumbnail
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 THUMBNAIL_CACHE_TIMEOUT = 3600 * 24 * 365
+
+# Django-articles settings
+DISQUS_USER_API_KEY = "pDTOxnBsflh8eCzUaAcK2q7Dz6rAMVj3E8GDpL0dj85dceivU0tgThTT1CVBYnvv"
+DISQUS_FORUM_SHORTNAME = "samosit"

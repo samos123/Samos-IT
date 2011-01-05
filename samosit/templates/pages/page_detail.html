@@ -1,5 +1,5 @@
 {% extends "page.html" %}
-{% block metatitle %}{{object.metatitle}}{% endblock %}
+{% block title %}{{object.metatitle}}{% endblock %}
 {% block content %}
   <h1>{{object.title}}</h1>
   {{object.content|safe}}
@@ -13,7 +13,7 @@
                     <div class="box">
                         <h3>Sub-Pages</h3>
                         
-  {# Better to make a custom tag for this! #}
+  {# Not nice, will change later! #}
   {% if object.parent %}
   <ul>
   <li><a href="{{object.parent.get_absolute_url}}">{{object.parent.title}}</a></li>

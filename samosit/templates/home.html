@@ -19,15 +19,15 @@
             </div>
       <div class="span-24" id="homecontent">
         <div id="blogposts" class="span-7 colborder">
-          <h2>Blog:</h2>
+          <h2>Blog</h2>
             <ul>
-              <li><a href="#">Welcome to my blog!</a></li>
-              <li><a href="#">Welcome to my blog!</a></li>
-              <li><a href="#">Welcome to my blog!</a></li>
+              {% for article in articles %}
+              <li><a href="{{article.get_absolute_url}}">{{article.title}}</a></li>
+              {% endfor %}
             </ul><a href="/blog">Visit blog >></a>
         </div>
         <div class="span-7 colborder">
-          <h2>Projects:</h2>
+          <h2>Projects</h2>
             
             <ul>
               {% for project in projects %}

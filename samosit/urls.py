@@ -11,7 +11,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
     (r'^'+settings.PAGES_ROOT, include('samosit.pages.urls')),
-    (r'^'+settings.PROJECTS_ROOT, include('samosit.projects.urls'))
+    (r'^'+settings.PROJECTS_ROOT, include('samosit.projects.urls')),
+    (r'^blog/', include('articles.urls')),
     
 )
 

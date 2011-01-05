@@ -1,7 +1,7 @@
 {% extends "page.html" %}
 {% load thumbnail %}
 
-{% block metatitle %}{{object.metatitle}}{% endblock %}
+{% block title %}{{object.metatitle}}{% endblock %}
 {% block content %}
 {% for object in objects %}
   <h1 align="center"><a href="{{object.get_absolute_url}}">{{object.year}}: {{object.title}}</a></h1>

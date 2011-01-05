@@ -1,7 +1,7 @@
 {% extends "page.html" %}
 {% load thumbnail %}
 
-{% block metatitle %}{{object.metatitle}}{% endblock %}
+{% block title %}{{object.metatitle}}{% endblock %}
 {% block content %}
   <h1 align="center">{{object.title}}</h1>
 {% thumbnail object.image "585x400" as im %}

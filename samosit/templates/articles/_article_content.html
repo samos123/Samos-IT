@@ -1,7 +1,12 @@
-{% load i18n %}
+{% load i18n humanize %}
 <div id="article-content" class="article">
     <h2 class="title">{% trans article.title %}</h2>
-
+    <div style="float:right; margin-right: 5px;"><script type="application/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script></div>
+    <div class="title-meta">
+      Published {{ article.publish_date|naturalday }} by 
+      <a href="{% url articles_by_author article.author.username %}" title="{% trans 'Read other articles by this author' %}">{{ article.author.get_name }}</a>
+    </div>
+    <br/>
     {{ article.rendered_content|safe }}
 </div>
 

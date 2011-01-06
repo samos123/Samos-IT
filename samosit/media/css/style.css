@@ -146,6 +146,22 @@ h1 {
 }
 
 
+#article-content h2.title{
+  margin-bottom: 0;
+}
+
+.title-meta{
+  font-size: 10pt;
+  margin-top: 0;
+  padding-top: 0;
+  color: grey;
+  font-style: italic;
+}
+
+.title-meta a{
+  text-decoration: underline;
+  color: grey;
+}
 
 
 

@@ -2,14 +2,6 @@
 
 <div id="article-meta">
 
-    <p><strong>{% trans 'Published' %}</strong>: {{ article.publish_date|naturalday }}</p>
-
-    <p><strong>{% trans 'Author' %}</strong>: <a href="{% url articles_by_author article.author.username %}" title="{% trans 'Read other articles by this author' %}">{{ article.author.get_name }}</a></p>
-
-    <p><strong>{% trans 'Word Count' %}</strong>: {{ article.word_count|intcomma }}</p>
-    
-    
-    <p><strong>{% trans 'Tags' %}:</strong> {% if article.tags.count %}{% for tag in article.tags.all %}<a href="{{ tag.get_absolute_url }}">{{ tag.name }}</a> {% endfor %}{% else %}None{% endif %}</p>
 
     {% if article.get_next_article %}
     <p>

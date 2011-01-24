@@ -167,14 +167,15 @@ h1 {
   position: absolute;
   background: url('/media/img/marry_brug_overlay.png');
   z-index: 1;
-  display: inherit;
-  width: 175px;
-  height: 175px;
+  width: 155px;
+  height: 140px;
   margin-top: -114px;
   margin-left: 65px;
 }
 
 
-
+.home ul{
+  list-style: none;
+}
 
 

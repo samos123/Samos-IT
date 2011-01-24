@@ -1,29 +1,16 @@
-{% extends "page.html" %}
+{% extends "projects/project_base.html" %}
 {% load thumbnail %}
 
-{% block title %}{{object.metatitle}}{% endblock %}
+{% block title %}Samos IT - Latest projects{% endblock %}
 {% block content %}
-{% for object in objects %}
-  <h1 align="center"><a href="{{object.get_absolute_url}}">{{object.year}}: {{object.title}}</a></h1>
-{% thumbnail object.image "600x200" crop="center" as im %}
+{% for project in projects %}
+  <h1 align="center"><a href="{{project.get_absolute_url}}">{{project.year}}: {{project.title}}</a></h1>
+{% thumbnail project.image "600x200" crop="center" as im %}
     <center><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></center>
 {% endthumbnail %}
-  <div class="project-description">{{object.content|safe|truncatewords:"40"}} <a href="{{object.get_absolute_url}}">Read More >></a></div>
+  <div class="project-description">{{project.content|safe|truncatewords:"40"}} <a href="{{project.get_absolute_url}}">Read More >></a></div>
   <hr/>
   
   
 {% endfor %}
-{% endblock %}
-
-{% block sidebar %}
-                    <div class="box">
-<div class="marry"></div>
-                        <h3 align="center">Projects</h3>
-                        
-                        
-
-                    </div>
-
-
-
 {% endblock %}

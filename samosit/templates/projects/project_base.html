@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+{% load thumbnail %}
+{% block sidebar %}
+<div class="box">
+  <div class="marry"></div>
+    <h3 align="center">Projects</h3>
+    <ul>
+    {% for project in projects %}
+      <li>
+    {% thumbnail project.image "50x20" crop="center" as im %}
+       <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+    {% endthumbnail %}
+        <a href="{{project.get_absolute_url}}">{{project.year}}: {{project.title}}</a></li>
+    {% endfor %}
+    </ul>
+      
+      
+
+    
+
+</div>
+
+
+
+{% endblock %}
